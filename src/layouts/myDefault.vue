@@ -1,6 +1,9 @@
 <template>
   <div>
-    <Menu />
+    <div class="flex bg-black bg-opacity-30 items-center justify-start">
+      <img src="/512x512.png" class="w-22 h-full"/>
+      <Menu />
+    </div>
     <router-view />
     <p>footer</p>
   </div>

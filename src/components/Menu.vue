@@ -1,5 +1,5 @@
 <template>
-  <div class="flex bg-gray">
+  <div class="flex">
     <router-link class="item" to="/">首页</router-link>
     <a class="item" href="http://www.baidu.com" target="_blank">社区</a>
     <router-link class="item" to="/study">学习</router-link>
