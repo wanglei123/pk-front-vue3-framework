@@ -1,6 +1,5 @@
 <template>
   <div ref="target" class="green">
-    <HelloWorld msg="" />
     <h1 className="text-3xl font-bold underline">这是首页</h1>
     <div>{{ msg }}</div>
   </div>

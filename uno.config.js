@@ -1,5 +1,5 @@
 // uno.config.ts
-import {presetIcons, presetWind, defineConfig} from 'unocss'
+import {presetIcons, presetWind, defineConfig, transformerDirectives} from 'unocss'
 
 export default defineConfig({
   presets: [
@@ -11,4 +11,5 @@ export default defineConfig({
       }
     })
   ],
+  transformers: [transformerDirectives()]
 })
