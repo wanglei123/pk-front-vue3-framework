@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex bg-black bg-opacity-30 items-center justify-start">
-      <img src="/512x512.png" class="w-22 h-full"/>
+      <img src="/512x512.png" class="w-22 h-full" alt=""/>
       <Menu />
     </div>
     <router-view />
