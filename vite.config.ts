@@ -41,7 +41,8 @@ export default defineConfig({
     }),
     Layouts({
       layoutsDirs: 'src/layouts',
-      pagesDirs: 'src/pages'
+      pagesDirs: 'src/pages',
+      defaultLayout: 'myDefault'
     })
   ],
   resolve: {
