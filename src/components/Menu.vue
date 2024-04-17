@@ -15,10 +15,10 @@
 .item {
   @apply relative text-white text-2xl px-8 py-2 font-300;
   &:hover {
-    @apply font-500;
+    @apply font-400;
     &:after{
       content: '';
-      @apply absolute bg-gray-100 w-8 h-1 bottom-0 left-[calc(50%-1rem)];
+      @apply absolute bg-gray-100 w-8 h-[1px] bottom-0 left-[calc(50%-1rem)];
       //left: calc(50% - 1rem);
     }
   }
