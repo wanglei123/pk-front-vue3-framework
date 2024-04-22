@@ -18,5 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "moduleResolution": "node" // 在router/index.ts中，vue-router/auto报红时，增加此句
+  "moduleResolution": "node", // 在router/index.ts中，vue-router/auto报红时，增加此句
+  "noImplicitAny": false
 }
