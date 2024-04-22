@@ -8,12 +8,21 @@ import bg from '@/assets/images/bg.png'
 
 const items: SwiperTypeItem[] = [
   {
-    image: bg
+    image: bg,
+    title: '1',
+    subTitle: '子标题1'
+  },
+  {
+    image: bg,
+    title: '2',
+    subTitle: '子标题2'
+  },
+  {
+    image: bg,
+    title: '3',
+    subTitle: '子标题3'
   }
 ]
-
-const msg = ref('123')
-const target = ref(null)
 </script>
 
 <style scoped></style>
