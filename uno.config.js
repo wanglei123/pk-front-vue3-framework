@@ -2,6 +2,9 @@
 import {presetIcons, presetWind, defineConfig, transformerDirectives} from 'unocss'
 
 export default defineConfig({
+  shortcuts: {
+    'bg-image': 'h-full w-full bg-cover bg-no-repeat bg-center-top'
+  },
   presets: [
     presetWind(),
     presetIcons({

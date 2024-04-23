@@ -12,7 +12,7 @@
   >
     <swiper-slide v-for="(item) in items" :key="item.image">
       <slot :item="item">
-        <div class="h-full w-full bg-cover bg-no-repeat bg-center" :style="{backgroundImage: `url(${item.image})`}">
+        <div class="bg-image" :style="{backgroundImage: `url(${item.image})`}">
           <Container class="h-full">
             <div class="flex flex-col justify-center items-start">
               <p class="text-4xl font-bold text-white">{{item.title}}</p>
