@@ -30,7 +30,9 @@ const items: SwiperTypeItem[] = [
 ]
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>
 <route lang="yaml">
 meta:
   layout: myDefault
