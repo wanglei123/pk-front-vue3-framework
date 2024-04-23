@@ -1,5 +1,5 @@
 <template>
-  <Swiper :items="items"></Swiper>
+  <Swiper :items="items" height="h-80"></Swiper>
 </template>
 <script setup lang="ts">
 import Swiper from '@/components/Swiper.vue'
