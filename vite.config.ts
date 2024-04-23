@@ -32,7 +32,8 @@ export default defineConfig({
         'vue',
         // 'vue-router',
         VueRouterAutoImports,
-        '@vueuse/core'
+        '@vueuse/core',
+        'pinia'
       ]
     }),
     Components({ resolvers: [IconsResolver()] }),
