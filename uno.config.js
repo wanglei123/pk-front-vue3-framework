@@ -16,5 +16,11 @@ export default defineConfig({
       }
     })
   ],
-  transformers: [transformerDirectives(), transformerVariantGroup()]
+  transformers: [transformerDirectives(), transformerVariantGroup()],
+  // 设置主题颜色
+  theme: {
+    colors: {
+      main: '#4E98F4'
+    }
+  }
 })

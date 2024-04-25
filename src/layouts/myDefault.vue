@@ -1,9 +1,18 @@
 <template>
   <div>
-    <div class="fixed top-0 w-full z-50" :class="{ 'bg-black bg-opacity-30 shadow-lg' : y > 0}">
+    <div
+      class="fixed top-0 w-full z-50 transition-all duration-300 h-0"
+      :class="[{ 'bg-black bg-opacity-30 shadow-lg' : y > 0}, {'lt-sm:(bg-black h-full)': show}]">
       <Container>
         <img src="/512x512.png" class="w-14 h-full lt-sm:mx-auto" alt=""/>
-        <div @click="() => toggle()" class="hidden i-ic-round-menu text-gray-300 text-2xl absolute right-3 cursor-pointer right-5 top-3 hover:(text-white) lt-sm:block"></div>
+        <div
+          @click="() => toggle()"
+          :class="['hidden text-gray-300 text-2xl absolute right-3 cursor-pointer right-5 top-3 hover:(text-white) lt-sm:block']">
+          <Transition name="rotate-icon" mode="out-in">
+            <div class="i-grommet-icons:form-close" v-if="show"></div>
+            <div class="i-ic-round-menu" v-else></div>
+          </Transition>
+        </div>
         <Menu v-show="show" class="lt-sm:(absolute top-14 right-0 w-full flex-col)"/>
       </Container>
     </div>
@@ -33,6 +42,25 @@ useResizeObserver(document.body, () => {
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.rotate-icon-enter-active{
+  animation: scaleYin 0.3s;
+
+}
+.rotate-icon-leave-active{
+  animation: scaleYin 0.3s reverse;
+}
+
+@keyframes scaleYin {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+}
 
 </style>
