@@ -18,13 +18,16 @@
     </div>
     <router-view />
     <div class="h-[4000px]"></div>
-    <p>footer</p>
+    <div class="mobile-hide">
+      <DefaultFooter icp="鄂ICP备19018123号-1"></DefaultFooter>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import Menu from '@/components/Menu.vue'
 import Container from '@/components/Container.vue'
+import DefaultFooter from '@/components/DefaultFooter.vue'
 const { y } = useWindowScroll()
 const [show, toggle] = useToggle(false)
 const flag = ref(false)
