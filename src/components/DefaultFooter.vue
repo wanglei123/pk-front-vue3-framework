@@ -68,6 +68,7 @@
 </template>
 
 <script setup lang="ts">
+import Container from '@/components/Container.vue'
 import wechat from '@/assets/images/wechat.jpg'
 import sina from '@/assets/images/sina.jpg'
 
