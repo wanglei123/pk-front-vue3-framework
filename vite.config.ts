@@ -11,7 +11,7 @@ import Components from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Layouts from 'vite-plugin-vue-layouts'
-import postcssViewportPlugin from 'postcss-px-to-viewport-8-plugin'
+// import postcssViewportPlugin from 'postcss-px-to-viewport-8-plugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
