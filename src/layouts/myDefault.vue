@@ -32,6 +32,7 @@
 <script setup lang="ts">
 import Menu from '@/components/Menu.vue'
 import Container from '@/components/Container.vue'
+import MobileNavbar from '@/components/MobileNavbar.vue'
 import DefaultFooter from '@/components/DefaultFooter.vue'
 
 const { y } = useWindowScroll()

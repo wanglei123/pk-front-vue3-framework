@@ -11,13 +11,20 @@ import Components from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Layouts from 'vite-plugin-vue-layouts'
+import prism from 'markdown-it-prism'
+import Markdown from 'unplugin-vue-markdown/vite'
+import { unheadVueComposablesImports } from '@unhead/vue'
 // import postcssViewportPlugin from 'postcss-px-to-viewport-8-plugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    VueRouter(),
-    vue(),
+    VueRouter({
+      extensions: ['.vue', '.md']
+    }),
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
     vueJsx(),
     VueDevTools(),
     UnoCSS(),
@@ -34,10 +41,11 @@ export default defineConfig({
         // 'vue-router',
         VueRouterAutoImports,
         '@vueuse/core',
-        'pinia'
+        'pinia',
+        unheadVueComposablesImports
       ]
     }),
-    Components({ resolvers: [IconsResolver()] }),
+    Components({ resolvers: [IconsResolver()], include: [/\.vue$/, /\.md$/] }),
     Icons({
       autoInstall: true
     }),
@@ -45,6 +53,12 @@ export default defineConfig({
       layoutsDirs: 'src/layouts',
       pagesDirs: 'src/pages',
       defaultLayout: 'myDefault'
+    }),
+    Markdown({
+      headEnabled: true,
+      markdownItUses: [
+        prism,
+      ],
     })
   ],
   resolve: {
