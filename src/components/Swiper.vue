@@ -9,6 +9,7 @@
     :modules="modules"
     :navigation="{prevEl: '.prev', nextEl: '.next'}"
     :pagination="{type: 'fraction', el: '.pagination'}"
+    v-bind="$attrs"
   >
     <swiper-slide v-for="(item) in items" :key="item.image">
       <slot :item="item">
@@ -22,7 +23,7 @@
         </div>
       </slot>
     </swiper-slide>
-    <div class="flex justify-center items-center absolute right-0 bottom-0 bg-white opacity-60 text-dark-300 w-30 h-10 z-30 ">
+    <div v-if="!$attrs.pagination_hide" class="flex justify-center items-center absolute right-0 bottom-0 bg-white opacity-60 text-dark-300 w-30 h-10 z-30 ">
       <div class="pagination w-unset! font-bold mr-4"></div>
       <div class="prev i-mdi-arrow-left-thin" style="font-size: 1.2rem"></div>
       <div class="next i-mdi-arrow-right-thin" style="font-size: 1.2rem"></div>
@@ -60,10 +61,13 @@ const getClassAndStyle = (str: string) => {
 }
 const modules = [Navigation, Pagination]
 
+const emits = defineEmits(['change'])
+
 const onSwiper = (swiper: SwiperType) => {
   console.log(swiper);
 };
-const onSlideChange = () => {
+const onSlideChange = (e) => {
+  emits('change', e)
   console.log('slide change');
 };
 </script>

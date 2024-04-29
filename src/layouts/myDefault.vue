@@ -20,7 +20,7 @@
 
     </div>
     <router-view />
-    <div class="mobile-hide">
+    <div class="mobile-hide mt-10">
       <DefaultFooter icp="鄂ICP备19018123号-1"></DefaultFooter>
     </div>
     <div class="hidden mobile">
