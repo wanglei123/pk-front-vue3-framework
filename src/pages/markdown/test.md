@@ -7,12 +7,14 @@ test: test
 ---
 <script setup lang="ts">
 import Container from '@/components/Container.vue';
-import Swiper from '@/components/Swiper.vue';
+import ImageSwiper from '@/components/ImageSwiper.vue';
 
 const items = ref(['https://static.www.toimc.com/blog/picgo/2023/06/19/swiper1-8a7d25.webp',
     'https://static.www.toimc.com/blog/picgo/2023/06/19/swiper3-fc8015.webp',
     'https://static.www.toimc.com/blog/picgo/2023/06/19/swiper4-19130b.webp'
-].map(item => ({image: item})))
+].map(item => ({image: item})));
+
+const titles = ref(['通识强化','进阶提升','高阶跃迁'])
 </script>
 
 
@@ -39,7 +41,7 @@ const items = ref(['https://static.www.toimc.com/blog/picgo/2023/06/19/swiper1-8
 ![img](https://static.www.toimc.com/blog/picgo/2023/06/19/section2-main-item2-a8e18a.webp)
 
 ## 阶段能力提升
-<Swiper :items="items" height="500px" class="w-full"></Swiper>
+<ImageSwiper :items="items" :titles="titles" :height="500" class="w-full" />
 
 ## **项目介绍**
 ![img](https://static.www.toimc.com/blog/picgo/2023/06/19/section4-main-item1-34f452.webp)
