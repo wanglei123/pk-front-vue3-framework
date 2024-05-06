@@ -45,7 +45,12 @@ export default defineConfig({
         unheadVueComposablesImports
       ]
     }),
-    Components({ resolvers: [IconsResolver()], include: [/\.vue$/, /\.md$/] }),
+    Components({
+      resolvers: [IconsResolver()],
+      include: [/\.vue$/, /\.md$/],
+      dirs: ['src/components'],
+      dts: true
+    }),
     Icons({
       autoInstall: true
     }),

@@ -3,7 +3,7 @@
     <!-- 头部内容 -->
     <div class="relative">
       <!-- Swiper -->
-      <Swiper :items="items" :height="36 * store.rate + 'rem'" :pagination_hide="true"></Swiper>
+      <Swiper :items="items" :height="36 * store.rate + 'rem'" :pagination_hide="false"></Swiper>
       <!-- Swiper里面登录 -->
       <div
         class="absolute bottom-0 left-0 w-full flex py-2 bg-gray-900 bg-opacity-40 z-20 lt-sm:display-none"
@@ -15,10 +15,14 @@
               <li class="active item">购物车</li>
             </ul>
             <ul class="flex types text-white" v-else>
-              <li class="active item">每日一课</li>
-              <li class="item">精品微课</li>
-              <li class="item">学习计划</li>
-              <li class="item">优质专栏</li>
+              <li
+                v-for="(subject,index) in subjects"
+                :key="index"
+                :class="['item', {active: activeSubIndex === index }]"
+                @click="() => {
+                  activeSubIndex = index
+                }"
+              >{{subject}}</li>
             </ul>
             <div class="flex items-center">
               <!-- 搜索 -->
@@ -49,6 +53,10 @@ import { useThemeStore } from '@/store/useThemeStore'
 import bg from '@/assets/images/bg.png'
 
 const store = useThemeStore()
+
+const activeSubIndex = ref(0)
+
+const subjects = ['每日一课','精品微课','学习计划','优质专栏']
 
 const items: SwiperItemType[] = [
   {

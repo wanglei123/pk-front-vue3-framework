@@ -1,6 +1,6 @@
 <template>
   <div>
-    study111
+    list
   </div>
 </template>
 

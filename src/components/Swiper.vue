@@ -23,7 +23,8 @@
         </div>
       </slot>
     </swiper-slide>
-    <div v-if="!$attrs.pagination_hide" class="flex justify-center items-center absolute right-0 bottom-0 bg-white opacity-60 text-dark-300 w-30 h-10 z-30 ">
+    <div v-if="!$attrs.pagination_hide"
+         class="flex justify-center items-center absolute right-0 bottom-0 bg-white opacity-60 text-dark-300 w-30 h-10 z-90 ">
       <div class="pagination w-unset! font-bold mr-4"></div>
       <div class="prev i-mdi-arrow-left-thin" style="font-size: 1.2rem"></div>
       <div class="next i-mdi-arrow-right-thin" style="font-size: 1.2rem"></div>
