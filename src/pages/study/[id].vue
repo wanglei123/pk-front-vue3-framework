@@ -29,6 +29,7 @@
       <Container>
         <!-- 课程详情 -->
         <div class="w-full flex mb-4">
+        <!-- 固定边栏和左侧的空隙-->
           <div class="w-[calc(75%-1rem)] bg-white mr-4">
             <!-- tabs -->
             <div class="border-b-1 border-b-color-gray-200">
@@ -37,7 +38,7 @@
                 <li class="px-4 py-2 cursor-pointer">章节目录</li>
                 <li class="px-4 py-2 cursor-pointer">学员评价</li>
               </ul> -->
-<!--              <Tabs :items="['课程介绍', '章节目录', '学员评价']" v-model="activeIndex"></Tabs>-->
+              <Tabs :items="['课程介绍', '章节目录', '学员评价']" v-model="activeIndex"></Tabs>
               <!-- tabs标题 -->
             </div>
             <!-- tabs content -->
@@ -76,6 +77,7 @@
 
 <script setup lang="ts">
 import Container from '@/components/Container.vue'
+import Tabs from '@/components/Tabs.vue'
 const activeIndex = ref(0)
 
 provide('activeIndex', activeIndex)
