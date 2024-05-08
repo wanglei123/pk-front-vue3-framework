@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-100vh">
     <div
       class="fixed top-0 w-full z-50 transition-all duration-300 h-0"
       :class="[{'lt-sm:(bg-black h-full)': show}]">
