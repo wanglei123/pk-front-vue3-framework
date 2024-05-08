@@ -1,10 +1,12 @@
 <template>
   <div>
-    study 里
+    <md></md>
   </div>
+
 </template>
 
 <script  setup lang="ts">
+import md from '../test.md'
 
 </script>
 
